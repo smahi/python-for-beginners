@@ -139,3 +139,93 @@ while x <= 10 and x > -1:
 for x in range(1, 5):
     print(x)
 ```
+
+## Lists
+
+```python
+numbers = [1, 2, 3, 4, 5]
+
+print(numbers[1])
+print(numbers[-1])
+print(numbers[2:4])
+
+numbers.append(6) # adds 6 to the end 
+numbers.insert(0, 6) # insert 6 at position 0
+numbers.remove(6) # removes 6, this will remove an item
+numbers.pop() # remove the last item
+numbers.clear() # removes all items
+numbers.index(3) # returns the first occurrence of 3
+numbers.sort()
+numbers.reverse()
+x = numbers.copy() # returns a copy of the list
+
+```
+
+## Tuples
+
+```python
+# Tuples
+coordinates = (1, 2, 3)
+
+print(coordinates)
+
+# unpack tuple
+x, y, z = coordinates # variable will be assigned a value from the tuple
+```
+
+## Dictionaries
+
+```python
+# Dictionaries
+
+customer = {
+    'name': 'John Doe',
+    'age': 45,
+    'is_verified': True
+}
+
+print(customer)
+
+print(customer['name'])
+print(customer['age'])
+print(customer['is_verified'])
+
+customer['phone'] = '0660000000' # this will add an new entry to the dictionary
+
+print(customer)
+
+customer.get('blablah', 'the_default_value') # if the key does not exist then the default value is returned
+
+# if the key does not exist it will throw an exception
+# customer('key')
+```
+
+## Functions
+
+```python
+# Function without params
+def add():
+    # some codes....
+    return 5+7
+
+print(add())
+
+# Function with params
+def prod(x, y):
+    result = x * y
+    return result
+
+print(prod(3, 5))
+
+# Function without return
+def greet(name):
+    print(f'Hello, {name}')
+    
+greet('Mohammed')
+
+def fullname(firstname, lastname):
+    return f'{lastname} {firstname}'
+
+
+print(fullname('John', 'Doe'))
+```
