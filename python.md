@@ -229,3 +229,43 @@ def fullname(firstname, lastname):
 
 print(fullname('John', 'Doe'))
 ```
+
+## Working with files
+
+```python
+# Read only the file content
+with open('names.txt', 'r') as f:
+    print(f.readlines())
+    
+# Write to the file
+with open('names.txt', 'w') as f:
+    f.write('Meriam')
+    
+# Append 'a', and allow to read & write '+'
+with open('names.txt', '+a') as f:
+    f.write('Ahmed')
+    f.seek(0) # move the cursor to the binning of the file
+    print(f.readlines())
+```
+
+
+**NB**:
+
+[https://docs.python.org/3/library/functions.html](https://docs.python.org/3/library/functions.html)
+
+
+## Working with Directories
+
+```python
+# To create a directory
+import os
+
+
+if not os.path.exists('test_dir'):
+    os.mkdir('test_dir')
+
+
+# list directory content
+print(os.listdir('.'))
+print(os.listdir('/home/smahi/Music'))
+```
