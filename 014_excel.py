@@ -10,7 +10,7 @@ ws = wb.active
 print(wb.get_sheet_names())
 
 # Read from Excel file 
-wb = load_workbook(filename='students.xls')
+wb = load_workbook(filename='students.xlsx')
 ws = wb.active
 
 print(ws['D7'].value)
