@@ -28,4 +28,4 @@ with open('users_data.csv') as f:
 # you need to install faker library using: pip install Faker
 with open('users_data.csv', '+a') as f:
     writer = csv.writer(f, delimiter=',')
-    writer.writerow([lines, fake.first_name(), fake.last_name(), fake.email(), fake.gender(), fake.ipv4()])
+    writer.writerow([lines, fake.first_name(), fake.last_name(), fake.email(), fake.random_element(elements=('Male', 'Female')), fake.ipv4()])
