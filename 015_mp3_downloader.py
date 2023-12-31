@@ -12,5 +12,20 @@ from bs4 import BeautifulSoup
 # read the html code
 response = requests.get("https://server7.mp3quran.net/shur/")
 
+if(response.status_code == 200):
+    html_doc = response.content
+    soup = BeautifulSoup(html_doc, 'html.parser')
+    my_list = soup.find_all('a')[3:]
+    
+    urls = []
 
-#soup = BeautifulSoup(html_doc, 'html.parser')
+    for a_tag in my_list:
+        url = f"https://server7.mp3quran.net/shur/{a_tag.contents[0]}"
+        urls.append(url)
+        
+        
+    print(urls[0])
+else:
+    print("An error occurred.")
+
+
